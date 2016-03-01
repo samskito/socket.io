@@ -23,10 +23,10 @@ Socket.io is a JavaScript library for realtime web apps
 	});```
 
 * **socket.send({Object} data)**
-	* A quick alternative for the emit method. The message's name will always be 'message'
+	* A quick alternative for the emit method. The message's name will always be _message_
 	* ```
 	socket.send('Hello world');
-	```
+	``
 
 * **socket.set[{String} name, {Object} data, {Function} callback]**
 	* Setter 
@@ -52,7 +52,7 @@ Socket.io is a JavaScript library for realtime web apps
 	});
 	```
 
-* Namespacing
+* **Namespacing**
 	* Server side :
 		* ```
 		var io = require('socket.io').listen(80);
@@ -74,27 +74,27 @@ Socket.io is a JavaScript library for realtime web apps
 ## Emit types from this [question](http://stackoverflow.com/questions/10058226/send-response-to-all-clients-except-sender-socket-io) : Send response to all clients except sender
 
 ```
-// sending to sender-client only
+**// sending to sender-client only**
  socket.emit('message', "this is a test");
 
- // sending to all clients, include sender
+ **// sending to all clients, include sender**
  io.emit('message', "this is a test");
 
- // sending to all clients except sender
+ **// sending to all clients except sender**
  socket.broadcast.emit('message', "this is a test");
 
- // sending to all clients in 'game' room(channel) except sender
+ **// sending to all clients in 'game' room(channel) except sender**
  socket.broadcast.to('game').emit('message', 'nice game');
 
- // sending to all clients in 'game' room(channel), include sender
+ **// sending to all clients in 'game' room(channel), include sender**
  io.in('game').emit('message', 'cool game');
 
- // sending to sender client, only if they are in 'game' room(channel)
+ **// sending to sender client, only if they are in 'game' room(channel)**
  socket.to('game').emit('message', 'enjoy the game');
 
- // sending to all clients in namespace 'myNamespace', include sender
+ **// sending to all clients in namespace 'myNamespace', include sender**
  io.of('myNamespace').emit('message', 'gg');
 
- // sending to individual socketid
+ **// sending to individual socketid**
  socket.broadcast.to(socketid).emit('message', 'for your eyes only');
  ```
