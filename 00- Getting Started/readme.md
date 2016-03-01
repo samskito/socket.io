@@ -9,8 +9,7 @@ npm install socket.io
 
 ### API
 * socket.emit[{String} messageName, {Object data}]
-	*```
-	  	socket.emit('myData', {
-			key: 'My value'
-		});
-	 ```
+	* ```
+	socket.emit('myData', {
+		key: 'My value'
+	});```
