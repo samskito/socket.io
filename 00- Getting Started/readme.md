@@ -12,4 +12,4 @@ npm install socket.io
 	* ```javascript
 	socket.emit('myData', {
 		key: 'My value'
-	});
+	});```
