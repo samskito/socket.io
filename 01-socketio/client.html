@@ -1,0 +1,11 @@
+<script type="text/javascript" src="node_modules/socket.io/node_modules/socket.io-client/socket.io.js"></script>
+<script type="text/javascript">
+	var socket = io('http://localhost:5000');
+
+	socket.on('alert', function(data) {
+		console.log(data);
+	});
+
+	var click = 'ping from client ' + Math.random();
+	socket.emit('click', click);
+</script>
