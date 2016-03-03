@@ -1,0 +1,37 @@
+<html>
+<head>
+	<title>Broadcast - Socket.io</title>
+	<style type="text/css">
+		.circle {width:100px;height:100px;background:green;border-radius:50%;display:block;}
+	</style>
+</head>
+<body>
+	<div class="circle" id="circle"></div>
+	<button id="blue">Blue</button>
+</body>
+
+<script type="text/javascript" src="node_modules/socket.io/node_modules/socket.io-client/socket.io.js"></script>
+<script type="text/javascript">
+	var socket = io('http://localhost:5000');
+	var circle = document.getElementById('circle');
+	var blue = document.getElementById('blue');
+
+	blue.addEventListener('click', function(event) {
+		circle.style.background = 'blue';
+
+		// Emit to server
+		socket.emit('color', 'blue');
+
+		blue.style.display = 'none';
+	});
+
+	socket.on('alert', function(data) {
+		console.log(data);
+	});
+
+	socket.on('color', function(data) {
+		circle.style.background = data;
+		blue.style.display = 'block';
+	});
+</script>
+</html>
