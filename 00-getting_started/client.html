@@ -1,0 +1,17 @@
+<script type="text/javascript">
+	// Set the connection
+	var socket = new WebSocket('ws://localhost:5000');
+
+	// When the connection starts
+	socket.onopen = function(event) {
+		// Send message to server
+		window.setInterval(function() {
+			socket.send('ping from client: ' + new Date());
+		}, 2000);
+
+		// When message from server is received
+		socket.onmessage = function(event){
+			console.log(event.data);
+		};
+	};
+</script>
