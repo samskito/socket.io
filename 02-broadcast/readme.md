@@ -4,12 +4,12 @@
 This a test of the broadcast concept of socket.io
 
 ### Install
-* git init
-* git pull git@github.com:samskito/socket.io.git
-* cd 02-broadcast
+* `git init`
+* `git pull git@github.com:samskito/socket.io.git`
+* `cd 02-broadcast`
 
 ### Start the server
-* node server.js
+* `node server.js`
 
 ### Check if its working
 * Open client.html in a browser and look at the console for connection status. Have more than one instance of this running.

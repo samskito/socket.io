@@ -4,12 +4,12 @@
 This is a simple javascript app with bidirectional communication between a server and n clients using [Socket.io](http://socket.io/docs/).
 
 ### Install
-* git init
-* git pull git@github.com:samskito/socket.io.git
-* cd 01-socketio
+* `git init`
+* `git pull git@github.com:samskito/socket.io.git`
+* `cd 01-socketio`
 
 ### Start the server
-* node server.js
+* `node server.js`
 
 ### Check if its working
 * Open client.html in a browser and look at the console
