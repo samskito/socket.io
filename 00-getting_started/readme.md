@@ -5,7 +5,7 @@
 Socket.io is a JavaScript library for realtime web apps
 
 ### Install 
-* npm install socket.io
+* `npm install socket.io`
 
 ### API
 * **socket.emit[{String} messageName, {Object} data]**
@@ -52,12 +52,12 @@ Socket.io is a JavaScript library for realtime web apps
 
 * **Namespacing**
 	* Server side :
-		* ```
+		* `
 		var io = require('socket.io').listen(80);
 		var task = io.of('customNamespace').on('connection', function(socket) {
 			task.emit('myData', {});
 		});
-		```
+		`
 	* Client side :
 		* `
 		var client = io.connect('http://localhost/customNamespace');
@@ -99,10 +99,10 @@ Socket.io is a JavaScript library for realtime web apps
 
 ## Exemple based on this [Youtube Video](https://www.youtube.com/watch?v=HtzA1sCr5FQ&list=PLw5h0DiJ-9PC0Wo1NWrNHgKE-mFc_9ftq): Build Podcast 063 Socket IO
 
-** Install WebSocket module via npm
+**Install WebSocket module via npm
 * `npm install --save ws`
 
-** Start the node server
+**Start the node server
 * `node server.js`
 * This will show the messages sent by the server in the client's console and the client's messages in the server's terminal
 
