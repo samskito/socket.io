@@ -1,6 +1,5 @@
 #Introduction to socket.io
 ## From the [Youtube Video](https://www.youtube.com/watch?v=nN6gFQMr3yU): Getting started with socket.io
----
 
 Socket.io is a JavaScript library for realtime web apps
 
@@ -67,6 +66,7 @@ Socket.io is a JavaScript library for realtime web apps
 			});
 		});
 		`
+		
 ---
 
 ## Emit types from this [question](http://stackoverflow.com/questions/10058226/send-response-to-all-clients-except-sender-socket-io): Send response to all clients except sender
